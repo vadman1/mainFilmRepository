@@ -1,3 +1,6 @@
+li {
+    list-style-type: none;
+}
 .vl {
     border-right: 3px solid black;
     height: 1500px;
@@ -182,7 +185,7 @@ nav {
 }
 .nav > li {
     float: left;
-    margin-right: 3px;
+    margin-right: 5px;
 }
 .nav > li > a {
     height: 34px;
@@ -270,7 +273,7 @@ nav {
     border-top: 1px solid #eee;
 }
 .dropdown li a {
-    color: #555;
+    color: #fa0000;
     padding: 8px 18px;
     margin: 0 -18px;
 }
