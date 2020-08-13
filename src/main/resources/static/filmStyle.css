@@ -15,11 +15,13 @@
 .product-list {
     background: #fafafa;
     padding: 10px 0;
+    margin-right: 10px; /* Отступ справа */
+    margin-bottom: 10px; /* Отступ снизу */
 }
 .product-list h3 {
     font-size: 18px;
     font-weight: 400;
-    color: #444444;
+    color: #ff0303;
     margin: 0 0 10px 0;
 }
 .yearRelease {

@@ -5,14 +5,12 @@ li {
 h1{
     color:white;
 }
-{
-    margin: 0;
-}
 html{
     height: 100%;
 }
 body{
     background: url("https://assets.nflxext.com/ffe/siteui/vlv3/63a8bbf4-b1ea-4adf-96e2-264486599178/61f498c9-09df-40e6-a69f-e6ef27da12f8/RU-en-20200810-popsignuptwoweeks-perspective_alpha_website_small.jpg");
+    background-position-y: bottom;
     height: 100%;
     flex-direction: column;
     display: block;

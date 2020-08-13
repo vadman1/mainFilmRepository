@@ -46,13 +46,21 @@
         <h3 >Самый ожидаемый фильм, который не удался!</h3>
         <span class="yearRelease">2020</span>
         <a href="" class="button">Подробнее</a>
-    </div>
-    <div th:each="el : ${films}" class = "alert alert-info mt-2">
-        <h3 th:text = "${el.getSynopsis()}"></h3>
-        <p th:text = "${el.getTitle()}"></p>
-        <p th:text = "${el.getYearRelease()}"></p>
-        <a th:href="'/top-100/' + ${el.id}">Детальнее</a>
+        <br>
     </div>
 </div>
+
+        <div th:each="el : ${films}" class="product-item">
+            <img src="/${el.id}.jpg" />
+                <div class="product-list">
+                    <p>
+                        <h3 th:text = "${el.getSynopsis()}"></h3>
+                        <p th:text = "${el.getTitle()}"></p>
+                        <p th:text = "${el.getYearRelease()}"></p>
+                        <a th:href="'/top-100/' + ${el.id}">Подробнее</a>
+                    </p>
+                </div>
+        </div>
+
 </body>
 </html>
