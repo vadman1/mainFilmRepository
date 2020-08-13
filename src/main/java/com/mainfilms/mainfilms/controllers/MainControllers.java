@@ -1,6 +1,7 @@
 package com.mainfilms.mainfilms.controllers;
 
 
+import com.mainfilms.mainfilms.models.Film_100;
 import com.mainfilms.mainfilms.repo.FilmRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -21,7 +22,8 @@ public class MainControllers {
 
     @GetMapping("/top-100")
     public String top100(Model model) {
-        model.addAttribute("title", "Топ-100");
+        Iterable<Film_100> films_100 = filmRepository.findAll();
+        model.addAttribute("films", films_100);
         return "top-100";
     }
 

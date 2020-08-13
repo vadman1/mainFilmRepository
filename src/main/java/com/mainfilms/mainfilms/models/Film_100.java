@@ -6,7 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Film {
+public class Film_100 {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -48,11 +48,11 @@ public class Film {
         this.yearRelease = yearRelease;
     }
 
-    public Film(){
+    public Film_100(){
 
     }
 
-    public Film(Long id, String title, String synopsis, int yearRelease) {
+    public Film_100(Long id, String title, String synopsis, int yearRelease) {
         this.id = id;
         this.title = title;
         this.synopsis = synopsis;

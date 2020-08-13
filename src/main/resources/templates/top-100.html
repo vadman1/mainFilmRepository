@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <title>MainFilms</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="filmStyle.css">
 </head>
-<h1 style="font-style:italic; text-align:center"><span style="font-size:58px"><span style="font-family:Comic Sans MS,cursive">MainFilms</span></span></h1>
+<h1 style="font-style:italic; text-align:center" ><span style="font-size:58px "  ><span style="font-family:Comic Sans MS,cursive">MainFilms</span></span></h1>
 <nav>
     <ul class="nav">
-        <li class="active"><a href="mainPage.html" >Главная</a></li>
-        <li class="dropdown">
+        <li><a href="mainPage.html" >Главная</a></li>
+        <li  class="dropdown">
             <a href="mainPage.html">Рейтинги</a>
             <ul>
                 <li><a href="/top-100">Топ 100</a></li>
@@ -43,9 +43,15 @@
 <div class="product-item">
     <img src="/лучший фильм.jpg" />
     <div class="product-list">
-        <h3>Режиссёр смыл свою репутацию</h3>
+        <h3 >Самый ожидаемый фильм, который не удался!</h3>
         <span class="yearRelease">2020</span>
         <a href="" class="button">Подробнее</a>
+    </div>
+    <div th:each="el : ${films}" class = "alert alert-info mt-2">
+        <h3 th:text = "${el.getSynopsis()}"></h3>
+        <p th:text = "${el.getTitle()}"></p>
+        <p th:text = "${el.getYearRelease()}"></p>
+        <a th:href="'/top-100/' + ${el.id}">Детальнее</a>
     </div>
 </div>
 </body>
